@@ -1,30 +1,22 @@
 {
-  "name": "uglify-loader",
-  "version": "2.0.0",
-  "description": "Uglify.js loader for webpack",
+  "name": "uglify-es-loader",
+  "version": "3.0.3",
+  "description": "Uglify.js loader for webpack(fork from uglify-loader, using uglify-es@3)",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bestander/uglify-loader"
+    "url": "https://github.com/zhang2333/uglify-es-loader"
   },
   "keywords": [
     "webpack",
-    "loader"
+    "loader",
+    "uglify"
   ],
-  "author": "Konstantin Raev",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bestander/uglify-loader/issues"
-  },
-  "homepage": "https://github.com/bestander/uglify-loader",
+  "author": "LouisZhang <spade9k@gmail.com>",
   "dependencies": {
     "loader-utils": "^1.0.2",
-    "source-map": "^0.5.6"
-  },
-  "peerDependencies": {
-    "uglify-js": "^2.4.16"
+    "source-map": "^0.5.6",
+    "uglify-es": "^3.3.9"
   }
 }

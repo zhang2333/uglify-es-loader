@@ -1,11 +1,11 @@
-# uglify-loader
-Uglify loader for webpack
+# uglify-es-loader
+Uglify loader for webpack(fork from uglify-loader, using uglify-es@3)
 
 To install
 ---
 
-```
-npm install uglify-loader --save-dev
+```shell
+npm i -D uglify-es-loader
 ```
 
 Use Case
@@ -16,7 +16,7 @@ In the applications that depend on thirdparty libraries you may want to uglify w
 Example
 ---
 **Webpack 1**
-```
+```js
 module: {
     loaders: [
         {
@@ -29,9 +29,9 @@ module: {
 }
 ```
 
-You can pass UglifyJS parameters via 'uglify-loader' property of webpack config.
+You can pass UglifyJS parameters via 'uglify-es-loader' property of webpack config.
 
-```
+```js
 module: {
     loaders: [
         {
@@ -42,22 +42,20 @@ module: {
         }
     ]
 },
-'uglify-loader': {
+'uglify-es-loader': {
     mangle: false
 }
 ```
 
-<br />
-
 **Webpack 2**
-```
+```js
 module: {
     rules: [
         {
             // I want to uglify with mangling only app files, not thirdparty libs
             test: /.*\/app\/.*\.js$/,
             exclude: /.spec.js/, // excluding .spec files
-            use: 'uglify-loader'
+            use: 'uglify-es-loader'
         }
     ]
 }
@@ -65,7 +63,7 @@ module: {
 
 You can pass UglifyJS parameters via loader options.
 
-```
+```js
 module: {
     rules: [
         {
@@ -73,12 +71,22 @@ module: {
             test: /.*\/app\/.*\.js$/,
             exclude: /.spec.js/, // excluding .spec files
             use: {
-                loader: 'uglify-loader',
+                loader: 'uglify-es-loader',
                 options: {
                     mangle: false
                 }
             }
         }
     ]
+}
+```
+
+Enable sourceMap
+```js
+{
+    loader: 'uglify-es-loader',
+    options: {
+        enableSourceMap: true
+    }
 }
 ```
