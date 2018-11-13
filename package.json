@@ -17,6 +17,6 @@
   "dependencies": {
     "loader-utils": "^1.0.2",
     "source-map": "^0.5.6",
-    "uglify-es": "^3.3.9"
+    "terser": "^3.10.11"
   }
 }
