@@ -1,19 +1,19 @@
 # uglify-es-loader
-Uglify loader for webpack(fork from uglify-loader, using uglify-es@3)
+Uglify loader for webpack(fork from uglify-loader, using terser@3)
 
-To install
+## To install
 ---
 
 ```shell
 npm i -D uglify-es-loader
 ```
 
-Use Case
+## Use Case
 ---
 Webpack has UglifyJSPlugin that uglifies the output after bundling.
 In the applications that depend on thirdparty libraries you may want to uglify with mangling only your application code but not the code that you don't control.
 
-Example
+## Example
 ---
 **Webpack 1**
 ```js
@@ -90,3 +90,9 @@ Enable sourceMap
     }
 }
 ```
+
+## Update
+
+- `3.0.4`
+
+  Replaced uglify-es with terser.

@@ -1,7 +1,7 @@
 {
   "name": "uglify-es-loader",
-  "version": "3.0.3",
-  "description": "Uglify.js loader for webpack(fork from uglify-loader, using uglify-es@3)",
+  "version": "3.0.4",
+  "description": "Uglify.js loader for webpack(fork from uglify-loader, using terser@3)",
   "main": "index.js",
   "repository": {
     "type": "git",

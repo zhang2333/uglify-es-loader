@@ -46,7 +46,7 @@ module.exports = function(source, inputSourceMap) {
     }
 
     var opts = loaderUtils.getOptions(this) || {};
-    var _opts = Object.assign(opts, {})
+    var _opts = Object.assign({}, opts)
     delete _opts.enableSourceMap
 
     if (opts.enableSourceMap === true) {
