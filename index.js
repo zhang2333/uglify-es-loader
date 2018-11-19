@@ -1,4 +1,4 @@
-var UglifyJS = require("uglify-es");
+var UglifyJS = require("terser");
 var loaderUtils = require('loader-utils');
 var sourceMap = require('source-map');
 
